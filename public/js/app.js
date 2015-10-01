@@ -17,7 +17,14 @@ app.config(function($routeProvider){
         templateUrl:"html/home.html",
         controller: "HomeController"
     })
+    .when("/weather",{
+        templateUrl:"html/weather.html",
+        controller: "WeatherController"
+    })
     .otherwise({
         redirectTo: "/home"
+        })
+        
     });
-});
+
+

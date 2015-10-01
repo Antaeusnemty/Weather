@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="ngWeather">
 <head>
     <meta charset="UTF-8">
     <title>ngWeather</title>
@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
 </head>
-<body>
+<body ng-controller="TestController">
       
 <div class="row">
 <div class="col-md-4"> 
@@ -17,11 +17,11 @@
 </ul>
 </div>  
 <div class="col-md-8">
-   <h1>Content</h1>
+   <h1>Content {{ test }}</h1>
 </div>
 </div>             
         
         
-        
+    <script src="js/app.js"></script>        
 </body>
 </html>

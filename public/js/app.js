@@ -1,6 +1,23 @@
-var app = angular.module("ngWeather",[]);
+var app = angular.module("ngWeather",["ngRoute"]);
 
 app.controller("TestController", function($scope){
 
     $scope.test = "It works";
+});
+
+app.controller("WeatherController", function($scope){
+    $scope.name = "Weather";
+});
+app.controller("HomeController", function($scope){
+
+});
+app.config(function($routeProvider){
+    $routeProvider
+    .when("/home",{
+        templateUrl:"html/home.html",
+        controller: "HomeController"
+    })
+    .otherwise({
+        redirectTo: "/home"
+    });
 });

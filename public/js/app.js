@@ -1,36 +1,8 @@
+//Initializes the angular application
 var app = angular.module("ngWeather",["ngRoute"]);
 
-app.controller("TestController", function($scope){
 
-    $scope.test = "It works";
-});
-
-app.controller("WeatherController", function($scope, $http){
-    $scope.latitude = 0;
-    $scope.logitude = 0;
-    $scope.weatherData = {};
-    var baseUrl = "https://api.forecast.io/forecast/";
-    var baseUrlwApi = baseUrl + apiKey+"/";
-    
-    //getWeather function
-    $scope.getWeather = function(){
-    
-        //http GET 
-        $http.jsonp(baseUrlwApi+$scope.latitude+","+$scope.longitude+"?callback=JSON_CALLBACK")
-            .success(function(response){
-                $scope.weatherData = response;
-                console.log($scope.weatherData);
-    })
-            .error(function(err){
-              console.log(err);
-    });
-    };
-    
-    
-});
-app.controller("HomeController", function($scope){
-
-});
+//This configures the front end routing using the $routeProvider
 app.config(function($routeProvider){
     $routeProvider
     .when("/home",{
@@ -45,6 +17,7 @@ app.config(function($routeProvider){
         redirectTo: "/home"
         })
         
-    });
+});
+
 
 

@@ -12,16 +12,17 @@
 </div>
 
 
-<button class="btn btn-primary" ng-click="getWeather()">Get Da Weather</button>
+<button class="btn btn-primary" ng-click="getWeather()">Get The Weather</button>
 
+<div ng-show = "showWeather" class="ng-scope ng-hide">
+    <div>
+        <p>Location: {{ weatherData.latitude }} , {{ weatherData.longitude }}</p>
+        <p>Temperature: {{ weatherData.currently.temperature }}</p>
+        <p>Precipitation:  {{ weatherData.currently.precipProbability }} % chance</p>
+        <p>Summary:  {{ weatherData.currently.summary }}</p>
+    </div>
+    <div>
+        <img src="" alt="Weather Icon">
 
-<div>
-    <p>Location: {{ weatherData.latitude }} , {{ weatherData.longitude }}</p>
-    <p>Temperature: {{ weatherData.currently.temperature }}</p>
-    <p>Percipitation:  {{ weatherData.currently.percipProbability }} % chance</p>
-    <p>Summary:  {{ weatherData.currently.summary }}</p>
-</div>
-<div>
-    <img src="" alt="Weather Icon">
-    
+    </div>
 </div>

@@ -12,7 +12,7 @@
     <div>
         <p>Location: {{ weatherData.latitude }} , {{ weatherData.longitude }}</p>
         <p>Temperature: {{ weatherData.currently.temperature }}</p>
-        <p>Precipitation:  {{ weatherData.currently.precipProbability }} % chance</p>
+        <p>Precipitation:  {{ weatherData.currently.precipProbability * 100 }} % chance</p>
         <p>Summary:  {{ weatherData.currently.summary }}</p>
     </div>
     <div>

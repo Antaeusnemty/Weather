@@ -37,14 +37,6 @@ app.controller("WeatherController", function($scope, weatherService, geocodeServ
             .error(function(err){
              console.log(err)
             })
-            
-        //weather service
-                                      //       weatherService.get(latitude, longitude)
-                                        //        .success(function(response){
-                                    //              $scope.weatherData = response;
-                                      //              $scope.showWeather = true;
-
-                                        //         })
         .error(function(err){
           console.log(err);
             $scope.showWeather = false;

@@ -16,7 +16,7 @@
         <p>Summary:  {{ weatherData.currently.summary }}</p>
     </div>
     <div>
-        <img src="" alt="Weather Icon">
+        <img ng-src="{{ imgSrc(weatherData.currently.icon) }}" alt="Weather Icon">
 
     </div>
 </div>

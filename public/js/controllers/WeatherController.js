@@ -1,10 +1,8 @@
-app.controller("WeatherController", function($scope, weatherService, geocodeService){
- //   $scope.latitude = 0;
-//    $scope.longitude = 0;
+app.controller("WeatherController", function($scope, weatherService, geocodeService, iconService){
     $scope.location = "";
     $scope.weatherData = {};
     $scope.showWeather = false;
-   
+    
     
     //getWeather function
     $scope.getWeather = function(){
@@ -41,5 +39,11 @@ app.controller("WeatherController", function($scope, weatherService, geocodeServ
           console.log(err);
             $scope.showWeather = false;
         });
+                                            //need help aaahhhhh!!!!!!
+        iconService.get(icon)
+            .success(function(response){
+             imgSrc(weatherData.currently.icon) = response;
+            });
     };
+
 });

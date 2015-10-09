@@ -10,4 +10,6 @@ return $http.jsonp(baseUrlwApi+latitude+","+longitude+"?callback=JSON_CALLBACK")
     };
 
     return service;
+    
+    
 });

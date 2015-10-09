@@ -2,8 +2,10 @@ app.controller("WeatherController", function($scope, weatherService, geocodeServ
     $scope.location = "";
     $scope.weatherData = {};
     $scope.showWeather = false;
+    $scope.weatherIconUrl = "";
     
     
+   
     //getWeather function
     $scope.getWeather = function(){
         var latitude = 0;
@@ -29,7 +31,7 @@ app.controller("WeatherController", function($scope, weatherService, geocodeServ
                     .success(function(response){
                         $scope.weatherData = response;
                         $scope.showWeather = true;
-
+                        $scope.weatherIconUrl = iconService.imgSrc($scope.weatherData.currently.icon);
                 });
              })
             .error(function(err){
@@ -40,10 +42,7 @@ app.controller("WeatherController", function($scope, weatherService, geocodeServ
             $scope.showWeather = false;
         });
                                             //need help aaahhhhh!!!!!!
-        iconService.get(icon)
-            .success(function(response){
-             imgSrc(weatherData.currently.icon) = response;
-            });
+        
     };
 
 });

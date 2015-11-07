@@ -41,7 +41,7 @@ app.controller("WeatherController", function($scope, weatherService, geocodeServ
           console.log(err);
             $scope.showWeather = false;
         });
-                                            //need help aaahhhhh!!!!!!
+                                           
         
     };
 
